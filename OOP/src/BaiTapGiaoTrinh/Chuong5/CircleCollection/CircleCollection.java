@@ -2,7 +2,7 @@ package BaiTapGiaoTrinh.Chuong5.CircleCollection;
 import java.util.ArrayList;
 
 public class CircleCollection  {
-	static ArrayList <Circle> al = new ArrayList<>();
+	 ArrayList <Circle> al = new ArrayList<>();
 	
 	public void addCircle(Circle c) {
 		al.add(c);
@@ -16,10 +16,10 @@ public class CircleCollection  {
 	}
 	
 	public void setCircle (int pos, Circle c) {
-		al.set(pos, c);
+		al.set(pos,c);
 	}
 
-	public void toStringC() {
+	public void Display() {
 		for(Circle a : al) {
 			System.out.println(a);
 		}
@@ -35,10 +35,10 @@ public class CircleCollection  {
 	
 	
 	public double findMinArea() {
-		double min =0;
+		double min = al.get(0).getArea();
 		for (Circle x : al) {
-			if(x.getArea() < min);
-			min = x.getArea();
+			if(x.getArea() < min)
+			   min = x.getArea();
 		}
 		return min;
 	}
@@ -46,8 +46,8 @@ public class CircleCollection  {
 	public double findMaxArea() {
 		double max =0;
 		for (Circle x : al) {
-			if(x.getArea() > max);
-			max = x.getArea();
+			if(x.getArea() > max)
+			    max = x.getArea();
 		}
 		return max;
 	}
